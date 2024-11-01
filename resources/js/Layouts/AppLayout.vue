@@ -10,7 +10,7 @@ defineProps({
     keywords: String,
     image_url: String,
 });
-const url = usePage().props.ziggy.url;
+const url = usePage().props.ziggy.location;
 </script>
 
 <template>
