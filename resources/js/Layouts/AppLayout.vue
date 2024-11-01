@@ -1,4 +1,8 @@
 <script setup>
+import Body from "@/Components/Custom/Body.vue";
+import Container from "@/Components/Custom/Container.vue";
+import Navbar from "@/Components/Custom/Navbar.vue";
+import Footer from "@/Components/Custom/Footer.vue";
 import { Head, usePage } from "@inertiajs/vue3";
 defineProps({
     title: String,
@@ -6,8 +10,7 @@ defineProps({
     keywords: String,
     image_url: String,
 });
-const page = usePage();
-const url = page.props.ziggy.url;
+const url = usePage().props.ziggy.url;
 </script>
 
 <template>
@@ -32,7 +35,11 @@ const url = page.props.ziggy.url;
         <meta name="robots" content="index, follow" />
     </Head>
 
-    <main>
-        <slot />
-    </main>
+    <Body>
+        <Navbar />
+        <Container>
+            <slot />
+        </Container>
+        <Footer />
+    </Body>
 </template>

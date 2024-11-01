@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('title', 255);
             $table->string('slug', 255)->unique();
+            $table->text('description')->nullable();
             $table->text('image_url')->nullable();
             $table->enum('status', ['end', 'ongoing']);
             $table->enum('type', ['manga', 'manhwa', 'manhua']);

@@ -4,6 +4,8 @@
 /public/build
 /public/hot
 /public/storage
+/public/sitemap
+/public/*.xml
 /storage/*.key
 /storage/pail
 /vendor

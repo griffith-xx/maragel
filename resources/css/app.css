@@ -5,3 +5,23 @@
 [x-cloak] {
     display: none;
 }
+
+.wallpaper {
+    background-image: url("../../public/images/wallpaper.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.marginY {
+    @apply my-3 sm:my-4 md:my-5;
+}
+
+.marginB {
+    @apply mb-3 sm:mb-4 md:mb-5;
+}
+
+.paddingY {
+    @apply py-3 sm:py-4 md:py-5;
+}
