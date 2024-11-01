@@ -14,7 +14,8 @@ const url = usePage().props.ziggy.location;
 </script>
 
 <template>
-    <Head :title="title">
+    <Head>
+        <title>{{ title }} - Maragel</title>
         <meta name="description" :content="description" />
         <meta name="keywords" :content="keywords" />
 
