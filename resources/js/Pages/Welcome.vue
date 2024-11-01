@@ -28,7 +28,7 @@ defineProps({
                 </Card>
             </div>
 
-            <Card>
+            <Card v-if="cosmics.data.length > 0">
                 <div
                     class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4"
                 >
@@ -80,7 +80,7 @@ defineProps({
                 </div>
             </Card>
 
-            <div class="marginY">
+            <div v-if="cosmics.links.length > 3" class="marginY">
                 <Card>
                     <Pagination :data="cosmics" />
                 </Card>
