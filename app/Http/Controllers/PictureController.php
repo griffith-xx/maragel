@@ -23,7 +23,7 @@ class PictureController extends Controller
         ];
 
         $cosmic = Cosmic::where('slug', $slug)->firstOrFail();
-        $episodes = Episode::select('number')->where('cosmic_id', $cosmic->id)->get();
+        $episodes = Episode::select('number')->where('cosmic_id', $cosmic->id)->orderByRaw('CAST(number AS UNSIGNED) DESC')->get();
         $episode = Episode::where('cosmic_id', $cosmic->id)->where('number', $ep)->first();
 
         $prevEpisode = Episode::where('cosmic_id', $cosmic->id)
