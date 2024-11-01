@@ -2,7 +2,7 @@
 import Card from "@/Components/Custom/Card.vue";
 import AppLayout from "@/Layouts/AppLayout.vue";
 import { router } from "@inertiajs/vue3";
-defineProps({
+const props = defineProps({
     pictures: Object,
     episodes: Object,
     nextEpisode: Object,
@@ -20,7 +20,7 @@ const redirect = (event) => {
     if (ep) {
         router.get(
             route("picture.index", {
-                slug: slug,
+                slug: props.slug,
                 episode: ep,
             })
         );
